@@ -1,88 +1,85 @@
-ul,ol{
-  padding: 5px;
-}
-a{
-  text-decoration: none;
-  color: antiquewhite;
-}
-
-#profile{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-} 
-/* Header Styles */
-header {
-  background-color: #4A90E2; /* Bright Blue */
-  height: 80px; /* Set header height */
-  padding: 0 1rem; /* Adjust padding to maintain spacing */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white; /* Text color */
-
-}
-
-header .logo {
-  background-color: #4A90E2;
-  color: white;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-header a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  transition: background-color 0.3s ease;
-}
-
-header a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
-/* Sidebar Styles */
-.offcanvas {
-  background-color: #4A90E2;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 300px;
-  z-index: 1045; /* Ensure it's above other content */
-}
-
-.offcanvas ul {
-  list-style: none;
-  padding: 0;
-}
-
-.offcanvas ul li {
-  padding: 1rem;
-}
-
-.offcanvas ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.offcanvas ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
+/* Reset some default styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* display: flex; */
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-links .link {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: white;
+  position: fixed;
+  top: 60px; /* height of the header */
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding-top: 20px;
+}
+
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-item {
+  padding: 10px 20px;
+}
+
+.sidebar-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 250px; /* width of the sidebar */
+  margin-top: 60px; /* height of the header */
+  padding: 20px;
+  width: calc(100% - 250px); /* adjust content width */
+  overflow-y: auto;
+}
+
+#profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.cretecontact{
+  padding: left 300px; ;
 }

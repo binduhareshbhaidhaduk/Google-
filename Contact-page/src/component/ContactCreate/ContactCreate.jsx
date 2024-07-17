@@ -54,7 +54,7 @@ function ContactCreate() {
     }, [isLoading, isSubmit, navigate]);
 
     return (
-        <Container className='m-auto'>
+        <Container className='m-auto cretecontact'>
             <div className="row  ps-5">
                 <div className='d-flex justify-content-center form'>
                     <div className="col6 p-3">
