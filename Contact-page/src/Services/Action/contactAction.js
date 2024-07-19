@@ -4,10 +4,6 @@ import generateUniqueId from "generate-unique-id";
 import { storage } from "../../firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 
-export const Create = (contact) => ({
-    type: 'ADD',
-    payload: contact
-});
 
 export const SRecord = (contact) => ({
     type: 'SINGLEREC',
@@ -39,6 +35,7 @@ export const addcontactAsync = (contact) => {
         setTimeout(() => {
             contact.id = generateUniqueId({ length: 4, useLetters: false });
             axios.post('http://localhost:3001/contect', contact).then(() => {
+                console.log("charizaad");
                 dispatch(getcontactAsync());
             }).catch((err) => {
                 console.log(err, 'err');

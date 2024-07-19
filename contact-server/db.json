@@ -4,7 +4,15 @@
       "id": "1259",
       "name": "asdfg",
       "phone": "",
+      "email": "binu234@gmail.com",
+      "address": "",
+      "notes": ""
+    },
+    {
+      "id": "5035",
+      "name": "bindu dhaduk",
       "email": "",
+      "phone": "",
       "address": "",
       "notes": ""
     }

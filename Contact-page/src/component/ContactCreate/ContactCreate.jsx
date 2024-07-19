@@ -18,9 +18,8 @@ function ContactCreate() {
         notes: ''
     });
 
-    const { isLoading } = useSelector(state => state.contactReducer);
+    let  isLoading  = useSelector(state => state.contactReducer.isLoading);
 
-    const [isSubmit, setIsSubmit] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -33,8 +32,11 @@ function ContactCreate() {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(addcontactAsync(inputState));
-        setIsSubmit(true);
+       
+        navigate('/')
     };
+
+
     const [uploading, setUploading] = useState(false);
     const handleImg = async (e) => {
         const file = e.target.files[0];
@@ -47,15 +49,15 @@ function ContactCreate() {
         }
         setUploading(false);
     };
-    useEffect(() => {
-        if (!isLoading && isSubmit) {
-            navigate('/');
-        }
-    }, [isLoading, isSubmit, navigate]);
+    // useEffect(() => {
+    //     if (!isLoading && isSubmit) {
+    //         navigate('/');
+    //     }
+    // }, [isLoading, isSubmit, navigate]);
 
     return (
         <Container className='m-auto cretecontact'>
-            <div className="row  ps-5">
+            <div className="row  ">
                 <div className='d-flex justify-content-center form'>
                     <div className="col6 p-3">
                         <div className=' head '>
@@ -94,14 +96,14 @@ function ContactCreate() {
                                 </Form.Label>
                                 <Form.Control type="text" onChange={handleInput} value={inputState.address} name='address' />
                             </Form.Group>
-                            <Form.Group as={Col} controlId="formGridNotes" className='d-flex p-1 fs-6'>
+                            <Form.Group as={Col} controlId="formGridNotes" className='d-flex pb-3 fs-6'>
                                 <Form.Label className='d-flex'>
                                     Notes
                                 </Form.Label>
                                 <Form.Control as="textarea" onChange={handleInput} value={inputState.notes} name='notes' />
                             </Form.Group>
 
-                            <Button variant="success" type='submit' disabled={isLoading}>
+                            <Button className="success" type='submit' disabled={isLoading}>
                                 {
                                     isLoading ? (
                                         <>

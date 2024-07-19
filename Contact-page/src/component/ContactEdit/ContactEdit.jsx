@@ -15,8 +15,8 @@ function ContactEdit() {
     const [inputState, setInputState] = useState({
         id: '',
         name: '',
-        phone: '',
         email: '',
+        phone: '',
         address: '',
         notes: ''
     });
@@ -89,13 +89,13 @@ function ContactEdit() {
                                 <Form.Label className='d-flex'>Name</Form.Label>
                                 <Form.Control type="text" onChange={handleInput} value={inputState.name} name='name' />
                             </Form.Group>
-                            <Form.Group as={Col} controlId="formGridPhoneNumber" className='d-flex p-1 fs-6'>
-                                <Form.Label className='d-flex'>Phone Number</Form.Label>
-                                <Form.Control type="number" onChange={handleInput} value={inputState.phone} name='phone' />
-                            </Form.Group>
                             <Form.Group as={Col} controlId="formGridEmail" className='d-flex p-1 fs-6'>
                                 <Form.Label className='d-flex'>Email</Form.Label>
                                 <Form.Control type="email" onChange={handleInput} value={inputState.email} name='email' />
+                            </Form.Group>
+                            <Form.Group as={Col} controlId="formGridPhoneNumber" className='d-flex p-1 fs-6'>
+                                <Form.Label className='d-flex'>Phone Number</Form.Label>
+                                <Form.Control type="number" onChange={handleInput} value={inputState.phone} name='phone' />
                             </Form.Group>
                             <Form.Group as={Col} controlId="formGridAddress" className='d-flex p-1 fs-6'>
                                 <Form.Label className='d-flex'>Address</Form.Label>
@@ -105,7 +105,7 @@ function ContactEdit() {
                                 <Form.Label className='d-flex'>Notes</Form.Label>
                                 <Form.Control as="textarea" rows={3} onChange={handleInput} value={inputState.notes} name='notes' />
                             </Form.Group>
-                            <Button className='btn btn-success' type="submit">SAVE</Button>
+                            <Button className='btn success' type="submit">SAVE</Button>
                         </Form>
                     </div>
                 </div>

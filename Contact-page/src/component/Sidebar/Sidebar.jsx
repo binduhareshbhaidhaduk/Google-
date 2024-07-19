@@ -5,14 +5,12 @@ function Sidebar() {
         <>
           
             
-            <div className="offcanvas">
-                <ul>
-                    <li><div>Contact</div></li>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/create'>Create</Link></li>
-                    <li><Link to='/login'>Login</Link></li>
-                </ul>   
-            </div>
+          <div className="sidebar">
+            <ul className="sidebar-list p-3">
+                <li className="sidebar-item"><Link to='/'>Home</Link></li>
+                <li className="sidebar-item"><Link to='/create'>Create</Link></li>
+            </ul>
+        </div>
          
 
             
